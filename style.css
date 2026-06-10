@@ -267,7 +267,7 @@ h4 {
     display: inline-flex;
     gap: 8px;
     font-size: 11px;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: rgba(233, 217, 184, .8);
     margin-bottom: 104px !important;
