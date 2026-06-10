@@ -267,7 +267,7 @@ h4 {
     display: inline-flex;
     gap: 8px;
     font-size: 11px;
-    letter-spacing: .4em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
     color: rgba(233, 217, 184, .8);
     margin-bottom: 104px !important;
@@ -938,6 +938,8 @@ section {
 
   :root {
     --service-card-height: 72vh;
+    --service-card-gap: 0vh !important;
+    --service-offset: 0rem !important;
   }
 
   .service-content {
@@ -961,51 +963,135 @@ section {
 
 /* Permita-se */
 .permitase {
-  padding: 128px 0;
-  background: url(assets/claudia-banner2.png);
+  padding: 80px 0;
+  
+  /* Degradê no mobile */
+  background-image: 
+    linear-gradient(279deg, rgba(42, 12, 20, 0.85), rgb(90 26 37 / 43%) 127%, rgb(138 42 58 / 40%)), url(assets/claudia-banner2.png);
+  
+  background-size: cover;
+  background-position: right 25% center; 
+  background-repeat: no-repeat;
   color: var(--champagne);
-  text-align: center
+  text-align: center; /* --- ALTERADO: Centraliza o texto no mobile --- */
+  position: relative;
 }
 
-@media(min-width:768px) {
+/* Ajuste do bloco de conteúdo no Mobile */
+.permitase .container, 
+.permitase-content {
+  max-width: 90%; /* Aumentado levemente para melhor aproveitamento do espaço centralizado */
+  margin: 0 auto; /* --- ALTERADO: Centraliza o bloco de conteúdo no mobile --- */
+}
+
+/* Breakpoint para Desktop (min-width: 768px) */
+@media(min-width: 768px) {
   .permitase {
-    padding: 176px 0
+    padding: 176px 0;
+    /* No desktop, limpa o degradê colorido do mobile e deixa o original escurecido */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(assets/claudia-banner2.png);
+    background-position: center;
+    text-align: center; 
+  }
+
+  .permitase .container,
+  .permitase-content {
+    max-width: 100%;
+    margin: 0 auto;
   }
 }
 
+/* Título */
 .permitase h2 {
-  font-size: clamp(56px, 10vw, 128px);
+  font-size: clamp(40px, 7vw, 128px); 
   line-height: .95;
   margin-top: 24px;
-  color: var(--champagne)
+  color: var(--champagne);
 }
 
 .permitase h2 em {
   font-style: normal;
-  color: var(--rose)
+  color: var(--rose);
 }
 
+/* Citação */
 .permitase blockquote {
   font-family: "Cormorant Garamond", serif;
   font-style: italic;
-  font-size: clamp(20px, 2.5vw, 28px);
-  color: rgba(233, 217, 184, .85);
+  font-size: clamp(18px, 2.5vw, 28px);
+  color: rgba(233, 217, 184, .85); 
   line-height: 1.5;
   max-width: 780px;
-  margin: 0 auto
+  margin: 0 auto; /* Já estava centralizado */
 }
 
+/* Subtítulo */
 .permitase .sub {
   margin-top: 32px;
   color: rgba(233, 217, 184, .7);
   max-width: 640px;
-  margin-left: auto;
-  margin-right: auto
+  margin-left: auto;  /* --- ALTERADO: Centraliza o subtítulo no mobile --- */
+  margin-right: auto; /* --- ALTERADO: Centraliza o subtítulo no mobile --- */
 }
 
+@media(min-width: 768px) {
+  .permitase .sub {
+    margin-left: auto; 
+    margin-right: auto;
+  }
+}
+
+/* "O CONCEITO" */
 .permitase .eyebrow {
   color: rgba(233, 217, 184, .7);
-  letter-spacing: .5em
+  letter-spacing: .5em;
+}
+
+/* Alinhamento do botão/elementos de ação */
+.permitase .btn, 
+.permitase button,
+.permitase a.cta { /* Adicione a classe real do seu botão se necessário */
+  margin-top: 24px;
+  margin-left: auto;  /* Garante a centralização se for elemento block/flex */
+  margin-right: auto; /* Garante a centralização se for elemento block/flex */
+}
+
+/* ====== BREAKPOINT PARA MOBILE ====== */
+/* Ajuste para telas menores (ex: iPhone 15 e anteriores) */
+@media(max-width: 767px) {
+  .permitase {
+    padding: 80px 0; /* Reduz o padding para mais espaço */
+    background-position: right; /* Desloca a modelo para a esquerda */
+  }
+
+  /* Reposicionamento do Conteúdo para não cobrir a modelo */
+  .permitase-content {
+    text-align: right; /* Alinha o texto à direita */
+    max-width: 100%; /* Garante que ocupe toda a largura disponível */
+    padding-right: 20px; /* Adiciona um recuo para não encostar na borda */
+    margin-right: 0; /* Remove a margem automática */
+  }
+
+  /* Ajustes de Fonte para Mobile */
+  .permitase h2 {
+    font-size: 40px; /* Reduz o tamanho do título */
+    margin-top: 16px;
+  }
+
+  .permitase blockquote,
+  .permitase .sub {
+    font-size: 18px; /* Reduz o tamanho do texto */
+    margin-top: 20px;
+    font-weight: 700;
+  }
+
+  /* Ajuste do Botão para Mobile */
+  .permitase .cta-button {
+    margin-right: 0; /* Remove a margem automática */
+    margin-left: auto; /* Alinha o botão à direita */
+    display: block; /* Garante que ocupe a linha inteira */
+    width: fit-content; /* Ajusta a largura ao conteúdo */
+  }
 }
 
 /* ============== DEPOIMENTOS PREMIUM ============== */
