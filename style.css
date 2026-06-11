@@ -390,12 +390,12 @@ h4 {
   margin-bottom: 24px
 }
 
-.hero-eyebrow::before {
+/* .hero-eyebrow::before {
   content: "";
   height: 1px;
   width: 32px;
   background: rgba(233, 217, 184, .6)
-}
+} */
 
 .hero-cta {
   margin-top: 40px;
