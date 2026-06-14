@@ -260,17 +260,17 @@ h4 {
 @media (max-width: 768px) {
 
   .hero-inner {
-    padding: 80px 24px 80px !important;
+    padding: 0 24px 110px !important;
   }
 
   .hero-eyebrow {
     display: inline-flex;
     gap: 8px;
     font-size: 11px;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.1em !important;
     text-transform: uppercase;
     color: rgba(233, 217, 184, .8);
-    margin-bottom: 104px !important;
+    margin-bottom: 24px !important;
     align-items: center;
     flex-wrap: nowrap;
 }
