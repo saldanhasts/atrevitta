@@ -260,7 +260,7 @@ h4 {
 @media (max-width: 768px) {
 
   .hero-inner {
-    padding: 0 24px 110px !important;
+    padding: 7px 21px 0 !important;
   }
 
   .hero-eyebrow {
