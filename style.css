@@ -1239,9 +1239,9 @@ section.section.bg-secondary.dep {
   animation: ry 27s linear infinite;
 }
 
-/* .a3d:hover {
+.a3d:hover {
   animation-play-state: paused;
-} */
+}
 
 .card3d {
   --w: 17.5em;

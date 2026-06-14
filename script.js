@@ -86,3 +86,4 @@ function trocarDepoimento() {
 trocarDepoimento();
 
 setInterval(trocarDepoimento, 5000);
+
