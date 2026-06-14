@@ -260,7 +260,7 @@ h4 {
 @media (max-width: 768px) {
 
   .hero-inner {
-    padding: 17px 21px 0 !important;
+    padding: 37px 21px 0 !important;
   }
 
   .hero-eyebrow {
@@ -700,7 +700,7 @@ section {
 }
 
 .services-copy {
-  margin: 18px 0;
+  margin: 18px 0 30px;
   color: var(--muted-fg);
   max-width: 620px;
 }
