@@ -417,7 +417,7 @@ section {
 }
 
 .section {
-  padding: 112px 0
+  padding: 97px 0
 }
 
 @media(min-width:768px) {
@@ -498,11 +498,11 @@ section {
   inset: -100%;
   background:
     linear-gradient(120deg,
-      transparent 30%,
+      transparent 20%,
       rgba(90, 26, 37, 0.466),
-      transparent 70%);
+      transparent 80%);
 
-  animation: shine 7s linear infinite;
+  animation: shine 5s linear infinite;
 }
 
 @keyframes shine {
@@ -1236,7 +1236,7 @@ section.section.bg-secondary.dep {
   display: grid;
   place-self: center;
   transform-style: preserve-3d;
-  animation: ry 36s linear infinite;
+  animation: ry 31s linear infinite;
 }
 
 .a3d:hover {

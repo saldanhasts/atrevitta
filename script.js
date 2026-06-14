@@ -53,7 +53,7 @@ function trocarDor() {
 trocarDor();
 
 /* autoplay */
-setInterval(trocarDor, 7000);
+setInterval(trocarDor, 5000);
 
 /* DEPOIMENTOS */
 
