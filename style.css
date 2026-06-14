@@ -417,7 +417,7 @@ section {
 }
 
 .section {
-  padding: 97px 0
+  padding: 112px 0
 }
 
 @media(min-width:768px) {
@@ -700,7 +700,7 @@ section {
 }
 
 .services-copy {
-  margin-top: 18px;
+  margin: 18px 0;
   color: var(--muted-fg);
   max-width: 620px;
 }
@@ -1236,7 +1236,7 @@ section.section.bg-secondary.dep {
   display: grid;
   place-self: center;
   transform-style: preserve-3d;
-  animation: ry 31s linear infinite;
+  animation: ry 27s linear infinite;
 }
 
 .a3d:hover {
