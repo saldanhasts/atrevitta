@@ -1,4 +1,4 @@
-# Atrevittá — Landing Page
+# Atrevittá | Landing Page
 
 Site estático em HTML/CSS/JS puro, pronto para hospedar ou vender.
 
